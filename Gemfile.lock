@@ -19,6 +19,7 @@ GEM
     bcrypt (3.1.10)
     builder (3.2.2)
     diff-lcs (1.2.5)
+    dotenv (2.0.2)
     faker (1.4.3)
       i18n (~> 0.5)
     i18n (0.7.0)
@@ -72,6 +73,7 @@ DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   bcrypt
+  dotenv
   faker
   pg
   rack-flash3

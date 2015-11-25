@@ -15,7 +15,7 @@ gem 'activerecord', '~>4.1'
 gem 'rack-flash3'
 gem 'bcrypt'
 gem 'rake'
-
+gem 'dotenv'
 gem 'shotgun'
 
 group :test do
