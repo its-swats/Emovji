@@ -1,22 +1,99 @@
-<%if flash[:errors] %>
-<div class='container'>
-  <ul>
-  <% flash[:errors].each do |error| %>
-    <li><%=error%></li>
-  <%end %>
-  </ul>
-</div>
-<%end %>
+<body>
+<div class='container-fluid'>
+<div class='page-header'>
 
-<div class="container">
-  <%if current_user  %>
-    <h1>Logged in as <a class='popup_form' href='/users/<%=current_user.id%>'><%=@current_user.username %></h1></a>
-    <a class='popup_form' id='show_edit_user_form' href='/users/<%=current_user.id%>/edit'>Edit User</a>
-    <a id='log_out' href='/sessions/<%=current_user.id%>'>Log Out</a>
-  <%else  %>
-  <a class='popup_form' id='show_new_user_form' href='/users/new'>Create User</a>
-  <a class='popup_form' id='show_log_in_form' href='/sessions/new'>Log In</a>
-  <%end %>
-  <div class="show_form">
+<div class='row'>
+<div class='col-lg-12'>
+
+ <ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">home</a></li>
+  <li role="presentation"><a href="#">login</a></li>
+  <li role="presentation"><a href="#">register</a></li>
+</ul>
+  <h1> EMOVji </h1>
+
+ <div class='jumbotron'>
+<p> what our app does and is all about!</p>
+
+<!-- Moods -->
+ <h3> What Mood are you in? </h3>
+ <div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
   </div>
 </div>
+
+<!-- Company -->
+<h3> Who are you with? </h3>
+ <div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+ </div>
+
+  <!-- Genre -->
+  <h3> Genre </h3>
+ <div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+    <a href="#" class="thumbnail">
+      <img src="..." alt="..."></a>
+  </div>
+ </div>
+
+</div>
+ <p>
+<a href="#" class="btn btn-default btn-lg" role='button'>find movie</a>
+ </p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
