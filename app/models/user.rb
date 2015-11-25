@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
 	validates :username, :email, :password_hash, presence: true
 	validates :email, uniqueness: true
 
+	has_many :recommendations
+	has_many :recommended_movies, class_name: "Movie", through: :recommendations, source: :movie
+
+
 	include BCrypt
 
 	def password
