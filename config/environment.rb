@@ -2,7 +2,7 @@
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
-
+dotenv.load
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
@@ -19,7 +19,7 @@ require 'rack-flash'
 require 'bcrypt'
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'dotenv'
 require 'erb'
 
 # Some helper constants for path-centric logic
