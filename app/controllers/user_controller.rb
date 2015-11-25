@@ -1,7 +1,7 @@
 #show all users
 get '/users' do
 	@users = User.all
-	erb :'/users/user_index'
+	 erb :'/users/index'
 end
 
 #new user form
