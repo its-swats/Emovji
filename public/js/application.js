@@ -2,6 +2,8 @@ $(document).ready(function() {
 	formHandler();
 	logoutHandler();
 	deleteAccountHandler();
+	submitAjaxRequest();
+	emojiClickHandler();
 });
 
 var formHandler = function() {
@@ -53,4 +55,14 @@ var deleteAccountHandler = function() {
 var clearForms = function () {
 	$('.show_form').empty();
 }
+
+
+var emojiClickHandler = function() {
+	$('.jumbotron a').on('click', function(event){
+		event.preventDefault();
+		console.log("FUCK YEAH");
+		$(this).toggleClass('selected');
+	})
+}
+
 
