@@ -19,6 +19,7 @@ var submitAjaxRequest = function() {
 
     response.done(function(data){
       var parse_data = JSON.parse(data);
+      console.log(parse_data)
       var random = Math.floor(Math.random() * (parse_data.results.length - 0));
       console.log(parse_data.results[random].original_title);
     });
