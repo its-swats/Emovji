@@ -21,7 +21,7 @@ var submitAjaxRequest = function() {
       var parse_data = JSON.parse(data);
       console.log(parse_data)
       var random = Math.floor(Math.random() * (parse_data.results.length - 0));
-      console.log(parse_data.results[random].original_title);
+      $('body').append("<h1>"+parse_data.results[random].original_title+"</h1>");
     });
   })
 }
