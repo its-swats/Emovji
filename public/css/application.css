@@ -11,9 +11,3 @@ th {
 .selected {
   border: 2px solid red;
 }
-
-.thumbnail:focus,
-a:focus,
-div:focus {
-   outline: none !important;
-}
