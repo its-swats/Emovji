@@ -20,8 +20,12 @@ var submitAjaxRequest = function() {
     response.done(function(data){
       var parse_data = JSON.parse(data);
       console.log(parse_data)
-      var random = Math.floor(Math.random() * (parse_data.results.length - 0));
-      console.log(parse_data.results[random].original_title);
+      if (parse_data.total_results === 0) {
+        console.log("Nothing found")
+      } else {
+        var random = Math.floor(Math.random() * (parse_data.results.length - 0));
+        $('body').append("<h1>"+parse_data.results[random].original_title+"</h1>");
+      };
     });
   })
 }

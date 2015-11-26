@@ -60,7 +60,6 @@ var clearForms = function () {
 var emojiClickHandler = function() {
 	$('.jumbotron a').on('click', function(event){
 		event.preventDefault();
-		console.log("FUCK YEAH");
 		$(this).toggleClass('selected');
 	})
 }
