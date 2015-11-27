@@ -3,6 +3,7 @@ var submitAjaxRequest = function() {
     event.preventDefault();
     var data = $('.jumbotron').find(".selected");
     var data_ids = []
+    var imgUrl = "https://image.tmdb.org/t/p/w185/"
     for (var i=0; i <= (data.length -1); i++) {
       data_ids.push(data[i].id);
     }
@@ -23,10 +24,13 @@ var submitAjaxRequest = function() {
       console.log(parse_data.results[0])
       if (parse_data.total_results === 0) {
         console.log("Nothing found")
-        $('#results-container').css('display': 'inline');
       } else {
         var random = Math.floor(Math.random() * (parse_data.results.length - 0));
-        $('body').append("<h1>"+parse_data.results[random].original_title+"</h1>");
+        var movieResult = parse_data.results[random]
+        $('#results-container').append("<h1>"+movieResult.original_title+"</h1>")
+        $('#results-container').append("<img src=" + imgUrl + movieResult.poster_path +">");
+        $('#results-container').append("<p>" + movieResult.overview + "</p>")
+        $('#results-container').css('display', 'block');
       };
     });
   })
