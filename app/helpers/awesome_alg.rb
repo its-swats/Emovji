@@ -5,10 +5,6 @@ helpers do
     genre_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/3/public/basic?alt=json"))
     mood_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/1/public/basic?alt=json"))
     company_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/2/public/basic?alt=json"))
-    p params.length
-    p params[:term1]
-    p params[:term2]
-    p params[:term3]
 
     if params.length == 2
       return "&with_genres=#{get_keyword(genre_spreadsheet, params[:term2])}&with_keywords=#{get_keyword(mood_spreadsheet, params[:term1])}"
@@ -76,20 +72,17 @@ helpers do
         x
       end
     end
-      # p "*" * 90
-      # p "Return value: #{input.uniq}"
-      return input.uniq
-    end
-
-    def get_keyword(input, params)
-      p params
-      p input
-      input.each do |row|
-        if row[0].downcase == params.downcase
-          return row[1..-1].sample
-        end
-      end
-
-    end
-
+    return input.uniq
   end
+
+  def get_keyword(input, params)
+    p params
+    p input
+    input.each do |row|
+      if row[0].downcase == params.downcase
+        return row[1..-1].sample
+      end
+    end
+  end
+
+end

@@ -60,8 +60,13 @@ var clearForms = function () {
 var emojiClickHandler = function() {
 	$('.jumbotron a').on('click', function(event){
 		event.preventDefault();
-		$(this).toggleClass('selected');
-	})
+		if ($(this).hasClass('selected')) {
+			$(this).removeClass('selected');
+		} else { 
+			$(this).parent().parent().children().children().removeClass('selected');
+			$(this).addClass('selected');
+		};
+	});
 }
 
 

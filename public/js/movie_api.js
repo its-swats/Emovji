@@ -31,9 +31,6 @@ var submitAjaxRequest = function() {
         var movieResult = parse_data.results[random];
 
         $('.modal-body').html("<h1>"+movieResult.original_title+"</h1>" + "<img src=" + imgUrl + movieResult.poster_path +">" + "<p>" + movieResult.overview + "</p>");
-        // $('#results-container').append("<img src=" + imgUrl + movieResult.poster_path +">");
-        // $('#results-container').append("<p>" + movieResult.overview + "</p>")
-        // $('#results-container').css('display', 'block');
       };
     });
   })
