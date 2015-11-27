@@ -3,6 +3,8 @@ var submitAjaxRequest = function() {
     event.preventDefault();
     var data = $('.jumbotron').find(".selected");
     var data_ids = []
+    $('.modal-body').empty();
+    $('.modal-body').html('Doing some really cool calculations')
     var imgUrl = "https://image.tmdb.org/t/p/w185/"
     for (var i=0; i <= (data.length -1); i++) {
       data_ids.push(data[i].id);
@@ -23,7 +25,7 @@ var submitAjaxRequest = function() {
       console.log(parse_data)
       console.log(parse_data.results[0])
       if (parse_data.total_results === 0) {
-        console.log("Nothing found")
+        $('.modal-body').html('<p>Nothing Found - try again</p>');
       } else {
         var random = Math.floor(Math.random() * (parse_data.results.length - 0));
         var movieResult = parse_data.results[random];
