@@ -11,3 +11,7 @@ th {
 .selected {
   border: 2px solid red;
 }
+
+#results-container {
+  display: none;
+}
