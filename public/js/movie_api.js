@@ -11,9 +11,9 @@ var submitAjaxRequest = function() {
       type: 'get',
       url: '/movies',
       data: {
-        mood: data_ids[0],
-        company: data_ids[1],
-        genre: data_ids[2]
+        term1: data_ids[0],
+        term2: data_ids[1],
+        term3: data_ids[2]
       }
     });
 
