@@ -1,15 +1,22 @@
 helpers do
 
   def movie_sorter(params)
-    key = "12fw-AWJXaTFhaYLT6Si5AcMd3imqtMTZqu-gDZw15TY"
+    key = ENV['SHEETS_KEY']
     mood_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/1/public/basic?alt=json"))
-    company_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/2/public/basic?alt=json"))
+    if params[:company]
+      company_spreadsheet = determine_worksheet(HTTParty.get("https://spreadsheets.google.com/feeds/cells/#{key}/2/public/basic?alt=json"))
+    end
 
-      mood = get_keyword(mood_spreadsheet, params[:mood])
-      company = get_keyword(company_spreadsheet, params[:company])
+      unless company_spreadsheet
+        return "&with_keywords=#{get_keyword(mood_spreadsheet, params[:mood])}"
+      else
+        return "&with_keywords=#{get_keyword(mood_spreadsheet, params[:mood])},#{get_keyword(mood_spreadsheet, params[:company])}"
+      end
+      # mood = get_keyword(mood_spreadsheet, params[:mood])
+      # company = get_keyword(company_spreadsheet, params[:company])
 
 
-      return [mood, company]
+      # return [mood, company]
 
     end
 
@@ -71,8 +78,8 @@ helpers do
           x
         end
       end
-      p "*" * 90
-      p "Return value: #{input.uniq}"
+      # p "*" * 90
+      # p "Return value: #{input.uniq}"
       return input.uniq
     end
 
