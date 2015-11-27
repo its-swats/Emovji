@@ -12,11 +12,6 @@ helpers do
       else
         return "&with_keywords=#{get_keyword(mood_spreadsheet, params[:mood])},#{get_keyword(mood_spreadsheet, params[:company])}"
       end
-      # mood = get_keyword(mood_spreadsheet, params[:mood])
-      # company = get_keyword(company_spreadsheet, params[:company])
-
-
-      # return [mood, company]
 
     end
 
