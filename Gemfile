@@ -17,6 +17,7 @@ gem 'rake'
 gem 'dotenv'
 gem 'shotgun'
 gem 'httparty'
+
 group :test do
   gem 'faker'
   gem 'rspec'
