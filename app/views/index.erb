@@ -28,7 +28,7 @@
   </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
     <a id="curious" href="#" class="thumbnail">
-      <img src="Emoji_Smiley-18.png" alt="..."></a>
+      <img id='test' src="Emoji_Smiley-18.png" alt="..."></a>
   </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" >
     <a id="excited" href="#" class="thumbnail">
@@ -82,9 +82,31 @@
  </div>
 
 </div>
- <p>
-<a href="#" class="btn btn-default btn-lg" id='find_movie' role='button'>find movie</a>
- </p>
+
+<!-- Button trigger modal -->
+<button type="button" id='find_movie' class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  find movie
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">your selection</h4>
+      </div>
+      <div class="modal-body">
+        **Finding your selection**
+      </div>
+      <div class="modal-footer">
+        <a href='#' data-dismiss="modal"><img src="Emoji Smiley-106.png" alt="..."></a>
+        <a href='#' data-dismiss="modal"><img src="Emoji Smiley-107.png" alt="..."></a>
+       <!--  <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 </div>
