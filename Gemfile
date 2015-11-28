@@ -17,6 +17,7 @@ gem 'rake'
 gem 'dotenv'
 gem 'shotgun'
 gem 'httparty'
+gem 'twilio-ruby'
 
 group :test do
   gem 'faker'

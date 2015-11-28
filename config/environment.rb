@@ -22,7 +22,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require 'dotenv'
 require 'erb'
-require 'net/http'
+require 'twilio-ruby'
 
 
 Dotenv.load

@@ -73,10 +73,12 @@ var emojiClickHandler = function() {
 var voteHandler = function() { 
 	$('body').on('click', '#myModal .vote', function(event){ 
 		event.preventDefault();
+		var twilioNumber = $('#twilio_number').val();
+		console.log(twilioNumber);
 		var response = $.ajax({
 			method: 'post',
 			url: $(this).attr('href'),
-			data: {type: $(this).attr('id'), title: $('#title').text()}
+			data: {type: $(this).attr('id'), title: $('#title').text(), number: twilioNumber}
 
 
 		})
