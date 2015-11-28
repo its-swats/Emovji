@@ -30,7 +30,7 @@ var submitAjaxRequest = function() {
         var random = Math.floor(Math.random() * (parse_data.results.length - 0));
         var movieResult = parse_data.results[random];
 
-        $('.modal-body').html("<h1>"+movieResult.original_title+"</h1>" + "<img src=" + imgUrl + movieResult.poster_path +">" + "<p>" + movieResult.overview + "</p>");
+        $('.modal-body').html("<h1 id='title'>"+movieResult.original_title+"</h1>" + "<img src=" + imgUrl + movieResult.poster_path +">" + "<p>" + movieResult.overview + "</p>");
       };
     });
   })
