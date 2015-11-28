@@ -4,6 +4,7 @@ $(document).ready(function() {
 	deleteAccountHandler();
 	submitAjaxRequest();
 	emojiClickHandler();
+	voteHandler();
 });
 
 var formHandler = function() {
@@ -69,4 +70,15 @@ var emojiClickHandler = function() {
 	});
 }
 
+var voteHandler = function() { 
+	$('body').on('click', '#myModal .vote', function(event){ 
+		event.preventDefault();
+		var response = $.ajax({
+			method: 'post',
+			url: $(this).attr('href'),
+			data: {type: $(this).attr('id'), title: $('#title').text()}
 
+
+		})
+	})
+}
